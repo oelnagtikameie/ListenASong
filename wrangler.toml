@@ -1,12 +1,2 @@
-# Cloudflare Pages 静态网站配置
-# ⚠️ 这是 Pages 配置，不是 Workers 配置
-
 name = "simple-music-player"
 pages_build_output_dir = "."
-
-[build]
-command = ""
-
-[env.production]
-name = "simple-music-player-production"
-vars = { ENVIRONMENT = "production" }
