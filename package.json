@@ -1,0 +1,26 @@
+{
+  "name": "简版网页-音乐播放器",
+  "version": "1.0.0",
+  "description": "一个功能完整的中文在线听歌网站，支持歌曲播放、歌手管理、排行榜、收藏和歌单功能",
+  "main": "mainpage.html",
+  "scripts": {
+    "start": "http-server",
+    "fetch-urls": "node fetch-music-urls.js",
+    "deploy": "wrangler pages deploy"
+  },
+  "keywords": [
+    "music",
+    "player",
+    "cloudflare-pages",
+    "chinese-music"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

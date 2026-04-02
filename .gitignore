@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Cloudflare 相关
+.wrangler/
+wrangler-dist/
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 系统文件
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# 本地开发
+dist/
+build/
+
+# 临时文件
+.cache/
+*.tmp
+temp/
+
+# 音乐文件（如果使用本地）
+# music/
+
+# 日志
+*.log

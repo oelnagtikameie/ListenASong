@@ -1,0 +1,35 @@
+# Cloudflare Pages 路由重定向规则
+
+# 主页重定向
+/ /mainpage.html 200
+
+# 菜单页面
+/menu /menu.html 200
+/menu.html /menu.html 200
+
+# 歌曲页面
+/songs /songs.html 200
+/songs.html /songs.html 200
+
+# 歌手页面
+/singers /singers.html 200
+/singers.html /singers.html 200
+
+# 排行榜页面
+/rank /rank.html 200
+/rank.html /rank.html 200
+
+# 收藏页面
+/favorite /favorite.html 200
+/favorite.html /favorite.html 200
+
+# 个人主页
+/mine /mine.html 200
+/mine.html /mine.html 200
+
+# 主页
+/mainpage /mainpage.html 200
+/mainpage.html /mainpage.html 200
+
+# API 路由（如果需要 Workers）
+/api/* /.netlify/functions/:splat 200
