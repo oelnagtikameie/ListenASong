@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目录 - 在线听歌</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="menu-wrapper">
+        <!-- 左侧菜单 -->
+        <aside class="left-menu">
+            <div class="menu-logo">在线听歌</div>
+            <nav class="menu-list">
+                <a href="menu.html" class="menu-link active">首页</a>
+                <a href="songs.html" class="menu-link">歌曲名称</a>
+                <a href="singers.html" class="menu-link">歌手</a>
+                <a href="rank.html" class="menu-link">排行榜</a>
+                <a href="favorite.html" class="menu-link">我的喜欢</a>
+                <a href="mine.html" class="menu-link">我的</a>
+            </nav>
+            <div class="back-to-home">
+                <a href="mainpage.html">← 返回主页</a>
+            </div>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="right-content">
+            <!-- 首页内容 -->
+            <div class="page-content active" id="homepage">
+                <div class="page-background" id="homepage-bg"></div>
+                <div class="content-wrapper">
+                    <h1 class="page-title">在线听歌APP简介</h1>
+                    
+                    <div class="intro-menu">
+                        <button class="intro-btn active" data-section="creator">创建人</button>
+                        <button class="intro-btn" data-section="instruction">使用说明</button>
+                        <button class="intro-btn" data-section="steps">使用步骤</button>
+                        <button class="intro-btn" data-section="category">分类介绍</button>
+                    </div>
+
+                    <div class="content-sections">
+                        <!-- 创建人 -->
+                        <div class="section active" id="creator">
+                            <h3>创建人</h3>
+                            <p>姓名：李涵洋      </p>
+                            <p>学号：202400800670</p>
+                        </div>
+
+                        <!-- 使用说明 -->
+                        <div class="section" id="instruction">
+                            <h3>使用说明</h3>
+                            <p>这是一个听歌平台，用户可以在这个网站进行听歌、收藏歌曲等操作~
+                                同时还可以查看排行榜，了解当前最流行的歌曲和歌手！
+                                甚至可以编辑个人信息，展示自己的个性化主页！
+                            </p>
+                        </div>
+
+                        <!-- 使用步骤 -->
+                        <div class="section" id="steps">
+                            <h3>使用步骤</h3>
+                            <p>没什么难的，标题即所得❤️
+                                快用你的鼠标点点点吧！</p>
+                        </div>
+
+                        <!-- 分类介绍 -->
+                        <div class="section" id="category">
+                            <h3>分类介绍</h3>
+                            <p>我们有歌曲、歌手、排行榜、我的喜欢、我的这五大分类，大家随兴点击探索吧！☆*: .｡. o(≧▽≦)o .｡.:*☆</p>
+                            <p>歌曲分类里有各种各样的歌曲，歌手分类里有各种各样的歌手，排行榜里有各种各样的排行榜，我的喜欢里有你喜欢的歌曲，我的里有你的个人信息！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

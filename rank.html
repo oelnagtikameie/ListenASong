@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排行榜 - 在线听歌</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="menu-wrapper">
+        <!-- 左侧菜单 -->
+        <aside class="left-menu">
+            <div class="menu-logo">在线听歌</div>
+            <nav class="menu-list">
+                <a href="menu.html" class="menu-link">首页</a>
+                <a href="songs.html" class="menu-link">歌曲名称</a>
+                <a href="singers.html" class="menu-link">歌手</a>
+                <a href="rank.html" class="menu-link active">排行榜</a>
+                <a href="favorite.html" class="menu-link">我的喜欢</a>
+                <a href="mine.html" class="menu-link">我的</a>
+            </nav>
+            <div class="back-to-home">
+                <a href="mainpage.html">← 返回主页</a>
+            </div>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="right-content">
+            <div class="page-background" id="rank-bg"></div>
+            <div class="content-wrapper">
+                <h1 class="page-title">排行榜</h1>
+                <div class="page-body">
+                    <!-- 排行榜标签页 -->
+                    <div class="rank-tabs">
+                        <button class="rank-tab-btn active" data-rank="songs">🎵 歌曲热度排行</button>
+                        <button class="rank-tab-btn" data-rank="singers">⭐ 歌手热度排行</button>
+                        <button class="rank-tab-btn" data-rank="newest">✨ 最新歌曲排行</button>
+                    </div>
+
+                    <!-- 排序选项 -->
+                    <div class="rank-sort-options">
+                        <label>排序方式:</label>
+                        <button class="sort-option-btn active" data-sort-type="default">默认排序</button>
+                        <button class="sort-option-btn" data-sort-type="ascending">升序</button>
+                        <button class="sort-option-btn" data-sort-type="descending">降序</button>
+                    </div>
+
+                    <!-- 排行榜列表 -->
+                    <div class="rank-container">
+                        <!-- 歌曲热度排行 -->
+                        <div class="rank-list active" id="rank-songs">
+                            <div class="rank-header">
+                                <span class="rank-number">排名</span>
+                                <span class="rank-name">歌曲名称</span>
+                                <span class="rank-artist">歌手</span>
+                                <span class="rank-genre">类型</span>
+                                <span class="rank-plays">播放数</span>
+                                <span class="rank-year">年份</span>
+                            </div>
+                            <div class="rank-items" id="rank-songs-list"></div>
+                        </div>
+
+                        <!-- 歌手热度排行 -->
+                        <div class="rank-list" id="rank-singers">
+                            <div class="rank-header">
+                                <span class="rank-number">排名</span>
+                                <span class="rank-name">歌手名称</span>
+                                <span class="rank-artist">性别</span>
+                                <span class="rank-genre">音乐类型</span>
+                                <span class="rank-plays">总播放数</span>
+                                <span class="rank-year">歌曲数</span>
+                            </div>
+                            <div class="rank-items" id="rank-singers-list"></div>
+                        </div>
+
+                        <!-- 最新歌曲排行 -->
+                        <div class="rank-list" id="rank-newest">
+                            <div class="rank-header">
+                                <span class="rank-number">排名</span>
+                                <span class="rank-name">歌曲名称</span>
+                                <span class="rank-artist">歌手</span>
+                                <span class="rank-genre">类型</span>
+                                <span class="rank-plays">发行年份</span>
+                                <span class="rank-year">播放数</span>
+                            </div>
+                            <div class="rank-items" id="rank-newest-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/music-data.js"></script>
+    <script src="js/rank.js"></script>
+</body>
+</html>

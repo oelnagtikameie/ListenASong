@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 - 在线听歌</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="menu-wrapper">
+        <!-- 左侧菜单 -->
+        <aside class="left-menu">
+            <div class="menu-logo">在线听歌</div>
+            <nav class="menu-list">
+                <a href="menu.html" class="menu-link">首页</a>
+                <a href="songs.html" class="menu-link">歌曲名称</a>
+                <a href="singers.html" class="menu-link">歌手</a>
+                <a href="rank.html" class="menu-link">排行榜</a>
+                <a href="favorite.html" class="menu-link">我的喜欢</a>
+                <a href="mine.html" class="menu-link active">我的</a>
+            </nav>
+            <div class="back-to-home">
+                <a href="mainpage.html">← 返回主页</a>
+            </div>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="right-content">
+            <div class="page-background" id="mine-bg"></div>
+            <div class="content-wrapper">
+                <h1 class="page-title">我的</h1>
+                <div class="page-body">
+                    <!-- 用户资料卡片 -->
+                    <div class="profile-card">
+                        <!-- 用户头像 -->
+                        <div class="avatar-section">
+                            <div class="avatar">
+                                <span id="avatarInitial">用</span>
+                            </div>
+                            <div class="user-brief">
+                                <h2 id="displayNickname">用户昵称</h2>
+                                <p id="displayBirthday">生日未设置</p>
+                            </div>
+                        </div>
+
+                        <!-- 编辑按钮 -->
+                        <button class="edit-btn" id="editBtn">编辑资料</button>
+
+                        <!-- 信息展示区 -->
+                        <div class="info-display" id="infoDisplay">
+                            <div class="info-item">
+                                <span class="info-label">性别:</span>
+                                <span class="info-value" id="displayGender">未设置</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">简介:</span>
+                                <span class="info-value" id="displayIntro">暂无简介</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">喜欢的歌曲类型:</span>
+                                <span class="info-value" id="displayGenres">未设置</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">关注的人:</span>
+                                <span class="info-value" id="displayFollows">暂无关注</span>
+                            </div>
+                        </div>
+
+                        <!-- 编辑表单 -->
+                        <form class="info-form" id="infoForm" style="display: none;">
+                            <div class="form-group">
+                                <label for="nickname">昵称:</label>
+                                <input type="text" id="nickname" placeholder="请输入昵称" maxlength="20">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="gender">性别:</label>
+                                <select id="gender">
+                                    <option value="">-- 请选择 --</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                    <option value="保密">保密</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="intro">一句话简介:</label>
+                                <input type="text" id="intro" placeholder="用一句话介绍自己" maxlength="50">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birthday">生日:</label>
+                                <input type="date" id="birthday">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="genres">喜欢的歌曲类型:(多个请用、分隔)</label>
+                                <input type="text" id="genres" placeholder="如：流行、摇滚、民谣" maxlength="50">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="follows">关注的人:(多个请用、分隔)</label>
+                                <input type="text" id="follows" placeholder="如：歌手A、歌手B" maxlength="100">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="save-btn">保存</button>
+                                <button type="button" class="cancel-btn" id="cancelBtn">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/mine.js"></script>
+</body>
+</html>

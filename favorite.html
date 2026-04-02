@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的喜欢 - 在线听歌</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="menu-wrapper">
+        <!-- 左侧菜单 -->
+        <aside class="left-menu">
+            <div class="menu-logo">在线听歌</div>
+            <nav class="menu-list">
+                <a href="menu.html" class="menu-link">首页</a>
+                <a href="songs.html" class="menu-link">歌曲名称</a>
+                <a href="singers.html" class="menu-link">歌手</a>
+                <a href="rank.html" class="menu-link">排行榜</a>
+                <a href="favorite.html" class="menu-link active">我的喜欢</a>
+                <a href="mine.html" class="menu-link">我的</a>
+            </nav>
+            <div class="back-to-home">
+                <a href="mainpage.html">← 返回主页</a>
+            </div>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="right-content">
+            <div class="page-background" id="favorite-bg"></div>
+            <div class="content-wrapper">
+                <h1 class="page-title">我的喜欢</h1>
+                <div class="page-body">
+                    <!-- 标签页切换 -->
+                    <div class="favorite-tabs">
+                        <button class="favorite-tab-btn active" data-tab="favorites">♥ 我的收藏</button>
+                        <button class="favorite-tab-btn" data-tab="playlists">📋 我的歌单</button>
+                    </div>
+
+                    <!-- 我的收藏页面 -->
+                    <div class="favorite-tab-content active" id="tab-favorites">
+                        <div class="favorites-header">
+                            <div class="header-info">
+                                <span>收藏歌曲数: <span id="favoriteCount">0</span></span>
+                                <button class="header-btn" id="clearAllBtn">清空全部</button>
+                            </div>
+                        </div>
+
+                        <div class="favorites-list" id="favoritesList">
+                            <div class="empty-state">
+                                <div class="empty-icon">♡</div>
+                                <p>还没有收藏任何歌曲</p>
+                                <p class="empty-hint">在歌曲列表中点击♥按钮来收藏喜欢的歌曲</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 我的歌单页面 -->
+                    <div class="favorite-tab-content" id="tab-playlists">
+                        <div class="playlists-header">
+                            <button class="create-playlist-btn" id="createPlaylistBtn">+ 创建新歌单</button>
+                        </div>
+
+                        <div class="playlists-container">
+                            <div class="playlists-grid" id="playlistsGrid">
+                                <div class="empty-state">
+                                    <div class="empty-icon">📋</div>
+                                    <p>还没有创建任何歌单</p>
+                                    <p class="empty-hint">点击"创建新歌单"按钮来开始创建</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 歌单详情浮窗 -->
+                        <div class="playlist-detail-panel" id="playlistDetailPanel" style="display: none;">
+                            <div class="detail-panel-backdrop"></div>
+                            <div class="detail-panel-content">
+                                <div class="detail-header">
+                                    <h2 id="detailPlaylistName"></h2>
+                                    <button class="detail-close-btn" onclick="closePlaylistDetail()">×</button>
+                                </div>
+                                <div class="detail-info">
+                                    <span>歌曲数: <span id="detailSongCount">0</span></span>
+                                    <span>创建时间: <span id="detailCreateTime"></span></span>
+                                </div>
+                                <div class="detail-songs" id="detailSongs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 创建歌单对话框 -->
+    <div class="modal" id="createPlaylistModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>创建新歌单</h2>
+                <button class="modal-close-btn" onclick="closeCreatePlaylistModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="playlistNameInput" placeholder="输入歌单名称..." maxlength="30">
+                <textarea id="playlistDescInput" placeholder="输入歌单描述（可选）..." maxlength="100" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" onclick="closeCreatePlaylistModal()">取消</button>
+                <button class="modal-btn confirm-btn" onclick="confirmCreatePlaylist()">创建</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/music-data.js"></script>
+    <script src="js/favorite.js"></script>
+</body>
+</html>
