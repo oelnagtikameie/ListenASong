@@ -6,6 +6,7 @@
   "scripts": {
     "start": "http-server",
     "fetch-urls": "node fetch-music-urls.js",
+    "build": "echo 'Static site - no build needed'",
     "deploy": "wrangler pages deploy"
   },
   "keywords": [
