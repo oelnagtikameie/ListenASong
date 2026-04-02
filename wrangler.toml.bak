@@ -1,0 +1,5 @@
+# 备份：旧的 wrangler.toml，已迁移到纯 Pages 部署
+# 如果需要恢复可以参考此文件
+
+name = "simple-music-player"
+pages_build_output_dir = "."
