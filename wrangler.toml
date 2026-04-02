@@ -1,18 +1,12 @@
-# Cloudflare Pages 项目配置
-name = "simple-music-player"
+# Cloudflare Pages 静态网站配置
+# ⚠️ 这是 Pages 配置，不是 Workers 配置
 
-# 发布目录（根目录为部署源）
+name = "simple-music-player"
 pages_build_output_dir = "."
 
-# 构建配置（Pages 请留空）
 [build]
 command = ""
 
-# 环境变量配置
 [env.production]
 name = "simple-music-player-production"
 vars = { ENVIRONMENT = "production" }
-
-[env.development]  
-name = "simple-music-player-dev"
-vars = { ENVIRONMENT = "development" }
