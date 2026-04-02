@@ -1,25 +1,18 @@
-name = "简版网页"
-type = "javascript"
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
+# Cloudflare Pages 项目配置
+name = "simple-music-player"
 
-# Cloudflare Pages 配置
+# 发布目录（根目录为部署源）
 pages_build_output_dir = "."
 
-[env.production]
-name = "简版网页-production"
-
+# 构建配置（Pages 请留空）
 [build]
-# 不需要构建步骤，直接部署静态文件
 command = ""
-cwd = "./."
-watch_paths = ["src/**/*.rs"]
 
-[build.upload]
-format = "service-worker"
+# 环境变量配置
+[env.production]
+name = "simple-music-player-production"
+vars = { ENVIRONMENT = "production" }
 
-# 环境变量
-[env.production.vars]
-ENVIRONMENT = "production"
+[env.development]  
+name = "simple-music-player-dev"
+vars = { ENVIRONMENT = "development" }
